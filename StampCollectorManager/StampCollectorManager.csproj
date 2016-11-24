@@ -89,11 +89,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\app\pages\controllers\admin.controller.js" />
+    <Content Include="Scripts\app\pages\services\admin.services.js" />
+    <Content Include="Scripts\libs\angular.js" />
+    <Content Include="Scripts\libs\bootstrap.js" />
+    <Content Include="Scripts\libs\bootstrap.min.js" />
+    <Content Include="Scripts\libs\jquery-3.1.1.js" />
+    <Content Include="Styles\bootstrap-theme.css" />
+    <Content Include="Styles\bootstrap-theme.min.css" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\site.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -102,6 +116,14 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Styles\bootstrap-theme.css.map" />
+    <Content Include="Styles\bootstrap.css.map" />
+    <Content Include="Scripts\app\pages\modules\admin.module.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,8 +133,22 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Admin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StampCollectorManager.BLL\StampCollectorManager.BLL.csproj">
+      <Project>{aa2ab8ef-6d0b-4f0c-89fd-4073df722be6}</Project>
+      <Name>StampCollectorManager.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StampCollectorManager.DAL\StampCollectorManager.DAL.csproj">
+      <Project>{39d47439-394e-4566-8ba8-883a7833f83f}</Project>
+      <Name>StampCollectorManager.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StampCollectorManager.INF\StampCollectorManager.INF.csproj">
+      <Project>{7ca16d47-88ea-4ed3-8b13-1a7db586ae93}</Project>
+      <Name>StampCollectorManager.INF</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

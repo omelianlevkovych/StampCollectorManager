@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles
+{
+    <link href="~/styles/bootstrap.css" rel="stylesheet" />
+    <link href="~/styles/site.css" rel="stylesheet" />
+}
+
+@section HeadScripts
+{
+    <script src="~/scripts/app/pages/modules/admin.module.js"></script>
+    <script src="~/scripts/app/pages/services/admin.services.js"></script>
+    <script src="~/scripts/app/pages/controllers/admin.controller.js"></script>
+}
+
+<section class="content" ng-app="adminModule">
+    <section ng-controller="adminController as vm">
+        <ul class="nav nav-tabs nav-justified">
+            <li role="presentation"><a href="#">Home</a></li>
+            <li role="presentation"class="active"><a href="#">Collectors</a></li>
+            <li role="presentation"><a href="#">Stamps</a></li>
+        </ul>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search by first name" ng-model="search.FirstName">
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th><label>#</label></th>
+                    <th><label>First name</label></th>
+                    <th><label>Last name</label></th>
+                    <th><label>Country</label></th>
+                    <th><label>Address</label></th>
+                    <th><label>Edit</label></th>
+                    <th><label>Remove</label></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="stampCollector in vm.stampCollectors | filter: search | orderBy: 'FirstName'">
+                    <td>{{stampCollector.Id}}</td>
+                    <td>{{stampCollector.FirstName}}</td>
+                    <td>{{stampCollector.LastName}}</td>
+                    <td>{{stampCollector.Country}}</td>
+                    <td>{{stampCollector.Address}}</td>
+                    <td>
+                        <button type="button" class="btn btn-warning btn-sm">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</section>
+
