@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StampCollectorManager.DAL",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StampCollectorManager.BLL", "StampCollectorManager.BLL\StampCollectorManager.BLL.csproj", "{AA2AB8EF-6D0B-4F0C-89FD-4073DF722BE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StampCollectorManager.Desktop", "StampCollectorManager.Desktop\StampCollectorManager.Desktop.csproj", "{CFB715DA-3DE9-46C5-A292-B1ADD1394B78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AA2AB8EF-6D0B-4F0C-89FD-4073DF722BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA2AB8EF-6D0B-4F0C-89FD-4073DF722BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA2AB8EF-6D0B-4F0C-89FD-4073DF722BE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB715DA-3DE9-46C5-A292-B1ADD1394B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB715DA-3DE9-46C5-A292-B1ADD1394B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB715DA-3DE9-46C5-A292-B1ADD1394B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB715DA-3DE9-46C5-A292-B1ADD1394B78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

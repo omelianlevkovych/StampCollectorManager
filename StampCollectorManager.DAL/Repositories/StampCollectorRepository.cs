@@ -31,6 +31,7 @@ namespace StampCollectorManager.DAL.Repositories
         public void Create(StampCollector item)
         {
             this.database.StampCollectors.Add(item);
+            this.database.SaveChanges();
         }
 
         public void Update(StampCollector item)
@@ -49,5 +50,10 @@ namespace StampCollectorManager.DAL.Repositories
             }
         }
 
+        public StampCollector GetByLastName(string lastName)
+        {
+            StampCollector stampCollector = this.database.StampCollectors.Where(p => p.LastName == lastName).FirstOrDefault();
+            return stampCollector;//this.database.StampCollectors.Where(p => p.LastName == lastName);
+        }
     }
 }

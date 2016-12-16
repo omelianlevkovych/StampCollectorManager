@@ -34,6 +34,7 @@ namespace StampCollectorManager.DAL.Repositories
         public void Create(Stamp item)
         {
             this.database.Stamps.Add(item);
+            this.database.SaveChanges();
         }
 
         public void Update(Stamp item)
